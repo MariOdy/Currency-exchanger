@@ -1,9 +1,10 @@
 import React from "react";
 import Select from "react-select";
-import useSymbols from "src/utils/useSymbols";
-import { Currency } from "../GlobalState/GlobalState";
+import useSymbols from "utils/useSymbols";
+import type Currency from "types/Currency";
 import { Box, FormatOptionWrapper } from "./styles";
 
+// Format currency to "Code | Name" format
 const formatOptionLabel: React.FC<Currency> = ({ value, label }) => (
   <FormatOptionWrapper>
     <div className="format-label">{label}</div>
@@ -12,18 +13,24 @@ const formatOptionLabel: React.FC<Currency> = ({ value, label }) => (
   </FormatOptionWrapper>
 );
 
-interface SelectCurrencyProps {
+interface CurrencySelectProps {
   value: Currency;
   onChange: (newValue: Currency) => any;
 }
 
-const SelectCurrency: React.FC<SelectCurrencyProps> = ({ value, onChange }) => {
-  const symbols = useSymbols();
+/** Custom selector for currencies */
+const CurrencySelect: React.FC<CurrencySelectProps> = ({ value, onChange }) => {
+  const { symbols } = useSymbols();
 
-  const symbolsData = symbols?.data?.map((symbol) => ({
-    label: symbol.code,
-    value: symbol.name,
-  }));
+  /** Format symbols array to select options */
+  const symbolsData = React.useMemo(
+    () =>
+      symbols?.map((symbol) => ({
+        label: symbol.code,
+        value: symbol.name,
+      })) || [],
+    [symbols]
+  );
 
   return (
     <Box>
@@ -39,4 +46,4 @@ const SelectCurrency: React.FC<SelectCurrencyProps> = ({ value, onChange }) => {
   );
 };
 
-export default SelectCurrency;
+export default CurrencySelect;

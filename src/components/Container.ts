@@ -9,9 +9,8 @@ const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   max-width: 1100px;
+  min-height: 550px;
   width: 100%;
-  max-height: 100%;
-  height: 550px;
 `;
 
 export default Container;

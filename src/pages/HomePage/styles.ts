@@ -48,15 +48,15 @@ export const HomePageWrapper = styled.div`
   }
 `;
 
-export const NextPage = styled(Link)`
-  background-color: #000000;
-  color: #ffffff!important;
-  width: 120px;
-  height: 40px;
+export const RatesPageLink = styled(Link)`
+  background-color: black;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: white !important;
+  height: 40px;
+  width: 120px;
 
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;

@@ -1,7 +1,8 @@
 import React from "react";
 import Select from "react-select";
-import useSymbols from "src/utils/useSymbols";
-import { Currency, useAppContext } from "../GlobalState/GlobalState";
+import type Currency from "types/Currency";
+import useSymbols from "utils/useSymbols";
+import { useAppContext } from "GlobalState";
 import { Box, FormatOptionBaseWrapper } from "./styles";
 
 const formatOptionLabel: React.FC<Currency> = ({ label }) => (

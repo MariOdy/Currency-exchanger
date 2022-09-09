@@ -1,19 +1,11 @@
 import React, { useMemo, useState } from "react";
-
- export interface Currency {
-  value: string;
-  label: string;
-}
+import type Currency from "types/Currency";
+import { UAHCurency } from "utils/currencies";
 
 interface AppContext {
   currentCurrency: Currency;
   setCurrentCurrency: React.Dispatch<React.SetStateAction<Currency>>;
 }
-
-const UAHCurency = {
-  label: "UAH",
-  value: "Ukrainian Hryvnia",
-};
 
 const defaultValue: AppContext = {
   currentCurrency: UAHCurency,

@@ -1,27 +1,16 @@
 import React from "react";
-import useConvert from "src/utils/useConvert";
-import SelectCurrency from "../Selects/SelectCurrency";
+import type Currency from "types/Currency";
+import useConvert from "utils/useConvert";
+import { EURCurency, UAHCurency } from "utils/currencies";
+import CurrencySelect from "components/Selects/CurrencySelect";
 import { ExchangeBlockWrapper } from "./styles";
-import { Currency } from "../GlobalState/GlobalState";
 
-const UAHCurency = {
-  label: "UAH",
-  value: "Ukrainian Hryvnia",
-};
-
-const EURCurency = {
-  label: "EUR",
-  value: "Euro",
-};
-
-const ExchangeBlock: React.FC = () => {
+const ExchangeCalculator: React.FC = () => {
   const [fromCurrency, setFromCurrency] = React.useState<Currency>(EURCurency);
   const [toCurrency, setToCurrency] = React.useState<Currency>(UAHCurency);
   const [amount, setAmount] = React.useState<number>(1);
 
-  const convert = useConvert(fromCurrency.label, toCurrency.label);
-
-  const rate = convert.data?.rate || 1;
+  const { rate } = useConvert(fromCurrency.label, toCurrency.label);
 
   // Swap from and to currencies
   const swapCurrencies = React.useCallback(() => {
@@ -32,7 +21,7 @@ const ExchangeBlock: React.FC = () => {
   return (
     <ExchangeBlockWrapper>
       <div>
-        <SelectCurrency value={fromCurrency} onChange={setFromCurrency} />
+        <CurrencySelect value={fromCurrency} onChange={setFromCurrency} />
         <button
           className="middle middle-btn"
           type="button"
@@ -41,7 +30,7 @@ const ExchangeBlock: React.FC = () => {
         >
           &#10598;
         </button>
-        <SelectCurrency value={toCurrency} onChange={setToCurrency} />
+        <CurrencySelect value={toCurrency} onChange={setToCurrency} />
       </div>
       <div>
         <input
@@ -62,4 +51,4 @@ const ExchangeBlock: React.FC = () => {
   );
 };
 
-export default ExchangeBlock;
+export default ExchangeCalculator;

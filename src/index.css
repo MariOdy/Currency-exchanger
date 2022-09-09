@@ -3,20 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  max-height: 100%;
-  height: 100%;
-  background: url('../public/images/line.png'), #607EAA;
+  background: url("/public/images/line.png"), #607eaa;
   font-family: "Montserrat", sans-serif;
 }
+
 a,
 button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
   cursor: pointer;
   text-decoration: none;
-  border: none;
-  background-color: transparent;
-  color: inherit;
 }
-a:visited{
+
+a:visited {
   color: inherit;
 }

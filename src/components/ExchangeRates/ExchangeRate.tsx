@@ -16,12 +16,12 @@ const ExchangeRate: React.FC<ExchangeRateProps> = ({
 }) => (
   <ExchangeRateWrapper>
     <div>
-      <h2>{code}</h2>
+      <h3>{code}</h3>
       <span> | </span>
-      <h4>{name}</h4>
+      <p>{name}</p>
     </div>
     <div>
-      <h4>{rate}</h4>
+      <p>{rate}</p>
       <div>{baseCode}</div>
     </div>
   </ExchangeRateWrapper>

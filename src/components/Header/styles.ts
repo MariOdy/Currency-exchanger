@@ -28,10 +28,10 @@ export const Logo = styled(Link)`
   font-size: 26px;
   line-height: 35px;
   h2 {
-    color: #000000;;
+    color: black;
   }
-  &:hover{
-    color: #F4A476;
+  &:hover {
+    color: #f4a476;
   }
   @media (max-width: 960px) {
     font-size: 16px;

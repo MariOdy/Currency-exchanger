@@ -1,7 +1,7 @@
 import React from "react";
-import useRates from "src/utils/useRates";
-import useSymbols from "src/utils/useSymbols";
-import { useAppContext } from "../GlobalState/GlobalState";
+import useRates from "utils/useRates";
+import useSymbols from "utils/useSymbols";
+import { useAppContext } from "GlobalState";
 import ExchangeRate from "./ExchangeRate";
 import { RatesWrapper } from "./styles";
 
@@ -12,7 +12,7 @@ interface ExchangeRatesProps {
 const ExchangeRates: React.FC<ExchangeRatesProps> = ({ symbols }) => {
   const { currentCurrency } = useAppContext();
 
-  const { data: rates } = useRates(currentCurrency.label, symbols);
+  const { rates } = useRates(currentCurrency.label, symbols);
   const { currencies } = useSymbols();
 
   return (

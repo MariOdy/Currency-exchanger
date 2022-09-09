@@ -1,33 +1,35 @@
 import styled from "styled-components";
 
 export const ExchangeBlockWrapper = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
   gap: 4px;
   margin-bottom: 50px;
+  width: 100%;
 
   > div {
+    align-items: center;
     display: grid;
+    gap: 20px;
     grid-template-columns: 45% auto 45%;
     justify-items: center;
-    gap: 20px;
-    align-items: center;
     width: 100%;
+
     .middle-btn {
       background-color: #ffffff;
     }
+
     .middle {
-      width: 50px;
-      height: 50px;
       border-radius: 50%;
       border: none;
       display: flex;
+      height: 50px;
       justify-content: center;
       line-height: 46px;
       font-size: 26px;
+      width: 50px;
     }
   }
   > div:nth-child(2) {

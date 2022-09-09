@@ -1,22 +1,18 @@
 import React from "react";
-import { BsGithub } from "react-icons/bs";
-import ExchangeRates from "src/components/ExchangeRate/ExchangeRates";
-import Container from "src/Container";
-import Header from "../../components/Header/Header";
+import ExchangeRates from "components/ExchangeRates";
+import GithubLink from "components/GithubLink";
+import Container from "components/Container";
+import Header from "components/Header";
 import { ExchangeRatesWrapper } from "./styles";
 
-const ExchangeRatesPage: React.FC = () => {
-  return (
-    <ExchangeRatesWrapper>
-      <Container>
-        <Header />
-        <ExchangeRates />
-      </Container>
-      <a href="https://github.com/MariOdy" target="_blank" rel="noreferrer">
-        <BsGithub />
-      </a>
-    </ExchangeRatesWrapper>
-  );
-};
+const ExchangeRatesPage: React.FC = () => (
+  <ExchangeRatesWrapper>
+    <Container>
+      <Header />
+      <ExchangeRates />
+    </Container>
+    <GithubLink />
+  </ExchangeRatesWrapper>
+);
 
 export default ExchangeRatesPage;
