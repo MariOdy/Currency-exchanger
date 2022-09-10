@@ -10,7 +10,9 @@ export const HomePageWrapper = styled.div`
   min-width: 100%;
   position: relative;
 
-
+  > div {
+    max-width: 1100px;
+  }
   main {
     width: 100%;
     display: flex;
