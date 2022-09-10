@@ -10,6 +10,7 @@ export const ExchangeRateWrapper = styled.div`
 
   align-items: center;
   display: flex;
+  flex: 1 0;
   justify-content: space-between;
 
   > div {
@@ -29,6 +30,26 @@ export const ExchangeRateWrapper = styled.div`
     > div {
       font-size: 16px;
       font-weight: 600;
+    }
+  }
+  @media (max-width: 480px) {
+    > div {
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      padding: 4px;
+      span {
+        display: none;
+      }
+      p {
+        font-size: 14px;
+        white-space: pre-wrap;
+      }
+    }
+    > div:nth-child(2) {
+      flex: 0;
+      align-items: center;
     }
   }
 `;

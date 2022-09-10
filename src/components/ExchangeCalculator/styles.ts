@@ -27,7 +27,7 @@ export const ExchangeBlockWrapper = styled.div`
       display: flex;
       height: 50px;
       justify-content: center;
-      line-height: 46px;
+      align-items: center;
       font-size: 26px;
       width: 50px;
     }

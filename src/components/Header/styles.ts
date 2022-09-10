@@ -17,28 +17,49 @@ export const HeaderWrapper = styled.header`
       height: 40px;
     }
   }
+  @media (max-width: 480px) {
+    padding: 30px;
+  }
 `;
 
 export const Logo = styled(Link)`
   display: flex;
   gap: 12px;
   align-items: center;
+  flex: 1 0;
 
   font-weight: 600;
-  font-size: 26px;
   line-height: 35px;
   h2 {
     color: black;
+    font-size: 40px;
   }
   &:hover {
     color: #f4a476;
   }
   @media (max-width: 960px) {
-    font-size: 16px;
     gap: 6px;
-
+    h2 {
+      font-size: 26px;
+    }
     img {
-      width: 35px;
+      width: 45px;
+    }
+  }
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 18px;
+    }
+    img {
+      height: 40px;
+    }
+  }
+  @media (max-width: 400px) {
+    h2 {
+      display: none;
+    }
+    img {
+      height: 60px;
     }
   }
 `;

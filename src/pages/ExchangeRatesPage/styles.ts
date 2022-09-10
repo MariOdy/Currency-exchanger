@@ -11,9 +11,6 @@ export const ExchangeRatesWrapper = styled.div`
   padding: 20px 0;
   > div {
     height: 100%;
-    > div:nth-child(2) {
-      margin-bottom: 40px;
-    }
   }
   svg {
     position: absolute;
@@ -26,5 +23,8 @@ export const ExchangeRatesWrapper = styled.div`
   }
   @media (max-width: 960px) {
     padding: 20px;
+    > div {
+      margin: auto 20px;
+    }
   }
 `;

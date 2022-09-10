@@ -57,7 +57,10 @@ export const FormatOptionWrapper = styled.div`
   grid-template-columns: 10% auto 80%;
   align-items: center;
   justify-content: start;
-  gap: 8px;
+  gap: 2%;
+  span {
+    padding: 0 5px;
+  }
   .format-fullName {
     text-align: left;
     font-weight: 500;
@@ -74,7 +77,7 @@ export const FormatOptionWrapper = styled.div`
     flex-direction: column;
     width: 100%;
     white-space: pre-line;
-    gap: 2px;
+    gap: 5%;
     span {
       display: none;
     }

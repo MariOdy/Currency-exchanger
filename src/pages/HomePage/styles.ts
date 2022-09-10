@@ -10,6 +10,7 @@ export const HomePageWrapper = styled.div`
   min-width: 100%;
   position: relative;
 
+
   main {
     width: 100%;
     display: flex;
@@ -41,7 +42,6 @@ export const HomePageWrapper = styled.div`
   }
 
   @media (max-width: 960px) {
-    padding: 0 20px;
     main {
       padding: 0 20px;
     }
